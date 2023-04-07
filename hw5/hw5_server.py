@@ -27,7 +27,7 @@ while True:
         # HTTP 바디 전송
         data = f.read()
         c.send(data.encode('euc-kr'))
-        c.close()
+        
     
     elif reg == "iot.png":
         f = open('./iot-1.png', 'rb')
@@ -39,7 +39,7 @@ while True:
         # HTTP 바디 전송
         data = f.read()
         c.send(data)
-        c.close()
+        
     
     elif reg == "favicon.ico":
         f = open('./favicon.ico', 'rb')
@@ -51,7 +51,7 @@ while True:
         # HTTP 바디 전송
         data = f.read()
         c.send(data)
-        c.close()
+        
 
     else:
         # HTTP 헤더 전송
@@ -60,4 +60,5 @@ while True:
         # HTTP 바디 전송
         c.send(b'<HTML><HEAD><TITLE>Not Found</TITLE></HEAD>')
         c.send(b'<BODY>Not Found</BODY></HTML>')
-        c.close()
+        
+    c.close()
