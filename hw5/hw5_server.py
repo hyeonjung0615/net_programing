@@ -61,7 +61,3 @@ while True:
         c.send(b'<HTML><HEAD><TITLE>Not Found</TITLE></HEAD>')
         c.send(b'<BODY>Not Found</BODY></HTML>')
         c.close()
-
-
-    # c.send(reg.encode())
-    # 웹 서
